@@ -4,8 +4,8 @@ A list of ES6 / Harmony / ES2015 features, tips, tools and resources.
 ## Table of Contents
 * [History](#history)
 * [Up & Running](#up-and-running)
-* New Title(#new-title)
-* Newer Title(#newer-title)
+* [New Title](#new-title)
+* [Newer Title](#newer-title)
 * Tools
 * Block Scoping
 * Parameter Handling
