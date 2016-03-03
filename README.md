@@ -18,10 +18,9 @@ A list of ES6 / Harmony / ES2015 features, tips, tools and resources. Start writ
 * [Promises](#promises)
 
 ## History
-ECMAScript is now 17 years old with it's birth in 1997 - you may know it from multiple well know implementations known as JavaScript, JScript and ActionScript. 
-
-* ECMAScript is the standard. JavaScript, ActionScript and JScript are implementations of it.
-* The language was invented by Brendan Eich at Netscape. 
+* ECMAScript is now 17 years old with it's birth in 1997 
+** ECMAScript is the standard. JavaScript, ActionScript and JScript are implementations of it.
+** The language was invented by Brendan Eich at Netscape. 
 * It first appeared in Navigator 2.0 browser and has appeared in all subsequent browsers from Netscape and in all browsers from Microsoft starting with Internet Explorer 3.0. 
 
 A brief snapshot of it's history:
