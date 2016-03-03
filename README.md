@@ -23,7 +23,7 @@ ECMAScript is now 17 years old with it's birth in 1997 - you may know it from mu
 A brief snapshot of it's history:
 
 | Version  | Year          | Notes                                                                   |
-| -------- |:-------------:|:-----------------------------------------------------------------------:|
+| -------- |:-------------:|-------------------------------------------------------------------------|
 | 1        | 1997          |      Oracle (prev. Sun) had trademark to Java, therefore JavaScript     |
 | 2        | 1998          |      ECMA International creates the ECMA-262 standard                   |
 | 3        | 1999          |      Introduced many features inherint in the language today            |
