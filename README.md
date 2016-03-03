@@ -1,5 +1,5 @@
 # es6
-A list of ES6 / Harmony / ES2015 features, tips, tools and resources. Standardization and implementation might take a while to reach the point where ECMAScript6 is widely adopted by developers - that being said, it's wise to adopt today what we'll see tomorrow, especially with the sheer amount of syntax changes in this edition. There is alot to learn. 
+A list of ES6 / Harmony / ES2015 features, tips, tools and resources. Standardization and implementation might take a while to reach the point where ECMAScript6 is widely adopted by developers - that being said, it's wise to adopt today what we'll see tomorrow, especially with the sheer amount of syntax changes in this edition.  
 
 ## Table of Contents
 * [ECMA History](#history)
