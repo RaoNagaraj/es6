@@ -44,9 +44,10 @@ _A brief snapshot of it's history:_
 * The specification was finalized in `June 2015`as it reached `feature complete` status
   * Subsequent versions will be released on a 12 month cadence, and will be dubbed `ES7`, `ES2016` respectively.
 
-## Up and Running
-
 ## Tools
+Of course you'd want to experiment and play around with code - to get up and running in ES6 you have tooling options depending on your goals, but I recommend using a `JavaScript transpiler`.
+
+* Just playing around 
 
 ## Block Scoping
 
