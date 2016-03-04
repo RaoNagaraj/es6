@@ -45,9 +45,9 @@ _A brief snapshot of it's history:_
   * Subsequent versions will be released on a 12 month cadence, and will be dubbed `ES7`, `ES2016` respectively.
 
 ## Tools
-Of course you'd want to experiment and play around with code - to get up and running in ES6 you have tooling options depending on your goals, but I recommend using a `JavaScript transpiler`.
+Of course you'd want to experiment and play around with code - to get up and running in ES6 you have tools and options depending on your goals, but for the best results I highly recommend using a `JavaScript transpiler`. In my humble opinion when transpiling 'ES6' to 'ES5' the greatest advantage is being able to see the resulting 'ES`
 
-* Just playing around 
+* J
 
 ## Block Scoping
 
