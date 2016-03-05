@@ -1,5 +1,5 @@
-# es6
-A list of ES6 / Harmony / ES2015 features, tips, tools and resources. Standardization and implementation might take a while to reach the point where ECMAScript6 is widely adopted by developers - that being said, it's wise to adopt today what we'll see tomorrow, especially with the sheer amount of syntax changes in this edition.  
+# ES6
+A list of ES6 / Harmony / ES2015 features, tips, tools and resources. Standardization and implementation might take a while to reach the point where ECMAScript6 is widely adopted by developers, but it's **wise to adopt today what we'll see tomorrow**.
 
 ## Table of Contents
 * [ECMA History](#history)
@@ -38,16 +38,28 @@ _A brief snapshot of it's history:_
 | 6        | unreleased    |      Early stages of development                                                         |
 
 ## ES6 Introduction
-* `ES6` is the newest addition to the language and adds significant new syntax for writing complex JavaScript applications.
+`ES6` is the newest addition to the language and adds **significant** new syntax for writing complex JavaScript applications.
  * There is 5 years between `ES5` and `ES6`.  
- * 'ES6' is the first ECMAScript Harmony specification and is also known as `ES Harmony`, `ES2015`, `ES.next` but commonly referred to as `ES6`.
+ * 'ES6' is the first **ECMAScript Harmony** specification and is also known as `ES Harmony`, `ES2015`, `ES.next` but commonly referred to as `ES6`.
 * The specification was finalized in `June 2015`as it reached `feature complete` status
   * Subsequent versions will be released on a 12 month cadence, and will be dubbed `ES7`, `ES2016` respectively.
 
 ## Tools
-Of course you'd want to experiment and play around with code - to get up and running in ES6 you have tools and options depending on your goals, but for the best results I highly recommend using a `JavaScript transpiler`. In my humble opinion when transpiling 'ES6' to 'ES5' the greatest advantage is being able to see the resulting 'ES`
+You should want to experiment and play around with code as you learn and it's easy to get up and running. There are several techniques and the premise they all these tools are built upon is called `transpiling`, or **JavaScript to JavaScript** transpiling which compiles the latest version into older versions.
+* Transpilation is the future for future ECMAScript transpilation, such as `ES2015` and `ES2016`
+* The most popular JavaScript transpilers are `Babel` and `Traceur`
+* Transpilation is possible to incorporate into your build process using `Grunt`, `Gulp` etc.
 
-* J
+The easiest way to get up and running in the web browser:
+
+* In the web browser you can use the online `Babel REPL` — this compiles `ES6` to `ES5` and you don't have to install anything.
+* Another web based tool is `Scratch JS` and comes in the form of a chrome extension. This interactive playground let's you transpile your code in the all familiar `dev tools` environment.
+
+If you prefer the command line:
+
+* Use Node,js v4.x.x or `>`, they support is in-built for Babel
+* Run `npm install -g babel' and `babel node`
+
 
 ## Block Scoping
 
