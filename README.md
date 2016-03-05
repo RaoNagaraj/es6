@@ -73,6 +73,10 @@ _Node has decent built in support for `ES6` thanks for the `V8` engine:_
  
 
 ## Block Scoping
+ES6 introduces block scoping:
+* anything between `{` ... `}` introduces it's own scope
+* this works like an `IIFE`
+
 ``` javascript
 {
   let foo = "Hello World from ES6";
