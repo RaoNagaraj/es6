@@ -1,5 +1,5 @@
 # ES6
-A list of ES6 / Harmony / ES2015 features, tips, tools and resources. Standardization and implementation might take a while to reach the point where ECMAScript6 is widely adopted by developers, but it's **wise to adopt today what we'll see tomorrow**.
+A list of ES6 / Harmony / ES2015 features, tips, tools and resources — standardization and implementation might take a while to reach the point where ECMAScript6 is widely adopted by developers, but it's **wise to adopt today what we'll see tomorrow**.
 
 ## Table of Contents
 * [ECMA History](#history)
@@ -45,21 +45,32 @@ _A brief snapshot of it's history:_
   * Subsequent versions will be released on a 12 month cadence, and will be dubbed `ES7`, `ES2016` respectively.
 
 ## Tools
-You should want to experiment and play around with code as you learn and it's easy to get up and running. There are several techniques and the premise they all these tools are built upon is called `transpiling`, or **JavaScript to JavaScript** transpiling which compiles the latest version into older versions.
-* Transpilation is the future for future ECMAScript transpilation, such as `ES2015` and `ES2016`
-* The most popular JavaScript transpilers are `Babel` and `Traceur`
-* Transpilation is possible to incorporate into your build process using `Grunt`, `Gulp` etc.
+You should want to experiment and play around with code — it's easy to get up and running. There are several techniques and the premise all these tools are built upon is called `transpiling`, or **JavaScript to JavaScript** transpiling which compiles the latest version into older versions.
+* Transpilation is the future for future ECMAScript such as `ES2015` and `ES2016`
+* The most popular JavaScript transpilers are `Babel` and was previously known as `6to5`
+* Transpilation is possible to incorporate into your build process using [Broccoli](), [Gulp](), [Browserify](), [RequireJS](), [Webpack]() et al and friends.
 
-The easiest way to get up and running in the web browser:
+_The easiest way to get up and running in the web browser:_
 
 * In the web browser you can use the online `Babel REPL` — this compiles `ES6` to `ES5` and you don't have to install anything.
 * Another web based tool is `Scratch JS` and comes in the form of a chrome extension. This interactive playground let's you transpile your code in the all familiar `dev tools` environment.
 
-If you prefer the command line:
-
+_If you prefer the command line:_
+a
 * Use Node,js v4.x.x or `>`, they support is in-built for Babel
 * Run `npm install -g babel' and `babel node`
 
+_Using an IDE_
+
+* You can easily use `Babel` to transpile your code in **Webstorm**, the setup won't take more than a couple of moments.
+
+_Node has decent built in support for `ES6` thanks for the `V8` engine:_
+
+* Node suports `ES6` features split into three groups
+ * Shipping: which do not require a **runtime flag**
+ * Staged: almost-complete features that are not considered stable
+ * In progress: features can be individually activated by their respective harmony flag `--harmony_destrucuting`
+ 
 
 ## Block Scoping
 
