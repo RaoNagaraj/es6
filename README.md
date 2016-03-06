@@ -123,16 +123,39 @@ console.log( x ); // 7
  * prefer `const` for variables that never change.
  * don't blindly refactor legacy code when replacing `var` with `let` and `const`.
  
-Some syntax to follow:
+Syntatically: 
  
  ``` javascript
  function myfunc() {
    if ( true ) {
-     let tmp = 54321;
+     let x = 54321;
    }
-   console.log(tmp); // => ReferenceError: tmp is not defined  
+   console.log( x ); // => ReferenceError: tmp is not defined  
  }
 ``` 
+
+``` javascript
+ function myfunc() {
+   if ( true ) {
+     var x = 54321;
+   }
+   console.log( x ); // => 54321 
+ }
+``` 
+
+``` javascript
+let outer = "outer";
+{
+  let inner = "inner";
+    { 
+      let nested = "nested"
+    }
+  console.log( inner ); // => you can access `inner`
+  console.log( nested ) // => throws error  
+} 
+// you can access `outer` here
+// you cannot access `inner` and `nested` here 
+```
 
 ## Parameter Handling
 
