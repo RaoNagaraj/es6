@@ -123,6 +123,8 @@ console.log( x ); // 7
  * prefer `const` for variables that never change.
  * don't blindly refactor legacy code when replacing `var` with `let` and `const`.
  
+Some syntax to follow:
+ 
  ``` javascript
  function myfunc() {
    if ( true ) {
