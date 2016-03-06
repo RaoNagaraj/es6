@@ -109,15 +109,28 @@ console.log( x ); // 7
 
 `let` and `const` are two new identifiers for storing values in `ES6` which you can additionally use to declare variables
 'let' and 'const' throw more exceptions as they behave more strictly than 'var'
-* `let` is block scoped and is **hoisted** to the top of it's **block**, unlike `var` which is hoisted to the top of it's **function** or **script**
-* `const` is also block scoped and is also hoisted to the top of it's block
+* `let` is block scoped and is **hoisted** to the top of it's block, **unlike** `var` which is hoisted to the top of it's **function** or **script**
+* `const` is also block scoped and is also **hoisted** to the top of it's block
     * it's worth noting that in ES6 functions are **block scoped** instead of lexically scoped
-'let`
+'var`
 * `let` does not create a property on the global object
+* `const` creates **immutable** variables, whilst `let` create **mutable** ones
 * a duplicate declaration of `let` will throw a **Reference Error** within a block or function
  * this is also known as `TDZ` or temporal dead zone
-* use `let` when you want to change the variables value
-* prefer `const` for variables that never change
+* _Basic rules to follow_: 
+ * don't use `var`, or leave it as a signal in untouched legacy code
+ * use `let` when you want to rebind
+ * prefer `const` for variables that never change
+ * don't blindly refactor legacy code when replacing `var` with `let` and `const`
+ 
+ ``` javascript
+ function myfunc() {
+   if ( true ) {
+     let tmp = 54321;
+   }
+   console.log(tmp); // => ReferenceError: tmp is not defined  
+ }
+``` 
 
 ## Parameter Handling
 
