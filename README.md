@@ -77,11 +77,12 @@ ES6 introduces block scoping:
 * anything between `{` ... `}` introduces it's own scope
 * this works like an `IIFE`
 
+
 ``` javascript
 {
     let quux = "Hello World from ES6";
     console.log(quux);
-    // => Hello World from ES6;
+    // => Hello World from ES6
 }
 
 {
@@ -93,6 +94,15 @@ ES6 introduces block scoping:
 console.log(quux); // Referece Error
 ```
 
+In ES5 you would use the `function` as the core for all your variable scoping.
+
+``` javascript
+(function iife() {
+  var a = 10;
+  console.log( a );
+})();
+```
+    
 ## Parameter Handling
 
 ## Destructuring Assignment
