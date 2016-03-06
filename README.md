@@ -89,18 +89,19 @@ ES6 introduces block scoping:
     console.log(foo); // => This has a different scope
 }
 
-console.log(quux); // Reference Error
+console.log(quux); // Reference Error: quux is not defined
 ```
 
 In ES5 you would use the `function` as the core for all your variable scoping.
 
 ``` javascript
 var x = 7;
+
 (function iife() {
   var x = 10;
-  console.log( x );
-  // => 10;
+  console.log( x ); // => 10;
 })();
+
 console.log( x ); // 7  
 ```
     
