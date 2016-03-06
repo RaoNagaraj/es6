@@ -79,9 +79,18 @@ ES6 introduces block scoping:
 
 ``` javascript
 {
-  let foo = "Hello World from ES6";
-  console.log(foo) // Hello World from ES6;
+    let quux = "Hello World from ES6";
+    console.log(quux);
+    // => Hello World from ES6;
 }
+
+{
+    let foo = "This has a different scope";
+    console.log(foo);
+    // => This has a different scope
+}
+
+console.log(quux); // Referece Error
 ```
 
 ## Parameter Handling
