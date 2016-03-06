@@ -113,6 +113,11 @@ console.log( x ); // 7
 * `const` is also block scoped and is also hoisted to the top of it's block
     * it's worth noting that in ES6 functions are **block scoped** instead of lexically scoped
 'let`
+* `let` does not create a property on the global object
+* a duplicate declaration of `let` will throw a **Reference Error** within a block or function
+ * this is also known as `TDZ` or temporal dead zone
+* use `let` when you want to change the variables value
+* prefer `const` for variables that never change
 
 ## Parameter Handling
 
