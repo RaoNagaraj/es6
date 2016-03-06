@@ -123,18 +123,19 @@ console.log( x ); // 7
  * prefer `const` for variables that never change.
  * don't blindly refactor legacy code when replacing `var` with `let` and `const`.
  
-Syntax: 
+how `let` works: 
  
  ``` javascript
  function myfunc() {
    if ( true ) {
      let x = 54321;
    }
-   console.log( x ); // => ReferenceError: tmp is not defined  
+   console.log( x ); // => ReferenceError: x is not defined  
  }
 ``` 
 
 ``` javascript
+// legacy ES5
  function myfunc() {
    if ( true ) {
      var x = 54321;
@@ -156,6 +157,17 @@ let outer = "outer";
 } 
 // you can access `outer` here
 // you cannot access `inner` and `nested` here 
+```
+how `const` works:
+
+``` javascript
+let quux = '123';
+baz = quux;
+console.log( baz ); // => 123
+
+const foo = '123';
+foo = '321';
+console.log( foo ); // TypeError
 ```
 
 ## Parameter Handling
