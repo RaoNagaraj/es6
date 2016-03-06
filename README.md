@@ -118,10 +118,10 @@ console.log( x ); // 7
 * a duplicate declaration of `let` will throw a **Reference Error** within a block or function
  * this is also known as `TDZ` or temporal dead zone
 * _Basic rules to follow_: 
- * don't use `var`, or leave it as a signal in untouched legacy code
- * use `let` when you want to rebind
- * prefer `const` for variables that never change
- * don't blindly refactor legacy code when replacing `var` with `let` and `const`
+ * don't use `var`, or leave it as a signal in untouched legacy code.
+ * use `let` when you want to rebind.
+ * prefer `const` for variables that never change.
+ * don't blindly refactor legacy code when replacing `var` with `let` and `const`.
  
  ``` javascript
  function myfunc() {
