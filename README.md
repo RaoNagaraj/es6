@@ -97,10 +97,13 @@ console.log(quux); // Referece Error
 In ES5 you would use the `function` as the core for all your variable scoping.
 
 ``` javascript
+var x = 7;
 (function iife() {
-  var a = 10;
-  console.log( a );
+  var x = 10;
+  console.log( x );
+  // => 10;
 })();
+console.log( x ); // 7  
 ```
     
 ## Parameter Handling
