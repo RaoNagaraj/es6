@@ -81,17 +81,15 @@ ES6 introduces block scoping:
 ``` javascript
 {
     let quux = "Hello World from ES6";
-    console.log(quux);
-    // => Hello World from ES6
+    console.log(quux); // => Hello World from ES6
 }
 
 {
     let foo = "This has a different scope";
-    console.log(foo);
-    // => This has a different scope
+    console.log(foo); // => This has a different scope
 }
 
-console.log(quux); // Referece Error
+console.log(quux); // Reference Error
 ```
 
 In ES5 you would use the `function` as the core for all your variable scoping.
