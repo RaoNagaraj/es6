@@ -4,7 +4,6 @@ A list of ES6 / Harmony / ES2015 features, tips, tools and resources — standar
 ## Table of Contents
 * [ECMA History](#history)
 * [Introduction](#es6-introduction)
-* [Up & Running](#up-and-running)
 * [Tools](#tools)
 * [Block Scoping](#block-scoping)
 * [Parameter Handling](#parameter-handling)
@@ -76,6 +75,7 @@ _Node has decent built in support for `ES6` thanks for the `V8` engine:_
 ES6 introduces block scoping:
 * anything between `{` ... `}` introduces it's own scope
 * this works like an `IIFE`
+* both `function scope` and `variable scope` should be taken into consideration 
 
 
 ``` javascript
@@ -92,7 +92,7 @@ ES6 introduces block scoping:
 console.log(quux); // Reference Error: quux is not defined
 ```
 
-In ES5 you would use the `function` as the core for all your variable scoping.
+In ES5 you would use the `function` as the **fundamental construct** for all your variable scoping.
 
 ``` javascript
 var x = 7;
