@@ -92,7 +92,7 @@ ES6 introduces block scoping:
 console.log(quux); // Reference Error: quux is not defined
 ```
 
-In ES5 you would use the `function` as the **fundamental construct** for all your variable scoping.
+> In ES5 you would use the `function` as the **fundamental construct** for all your variable scoping.
 
 ``` javascript
 var x = 7;
