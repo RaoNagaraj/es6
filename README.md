@@ -6,6 +6,7 @@ A list of ES6 / Harmony / ES2015 features, tips, tools and resources — standar
 * [Introduction](#es6-introduction)
 * [Tools](#tools)
 * [Block Scoping](#block-scoping)
+* [Let and Const](let-and-const)
 * [Parameter Handling](#parameter-handling)
 * [Destructuring Assignment](#destructuring-assignment)
 * [Classes](#classes)
@@ -70,13 +71,12 @@ _Node has decent built in support for `ES6` thanks for the `V8` engine:_
  * Staged: almost-complete features that are not considered stable
  * In progress: features can be individually activated by their respective harmony flag `--harmony_destrucuting`
  
-
 ## Block Scoping
 ES6 introduces block scoping:
 * anything between `{` ... `}` introduces it's own scope
 * this works like an `IIFE`
-* both `function scope` and `variable scope` should be taken into consideration 
-
+* functions are **block scoped** in ES6 
+ * this is more mainstream than **function scoping** which makes it easier when coming from or moving to other languages  
 
 ``` javascript
 {
@@ -105,6 +105,15 @@ var x = 7;
 console.log( x ); // 7  
 ```
     
+## Let and Const
+
+`let` and `const` are two new identifiers for storing values in `ES6` which you can additionally use to declare variables
+'let' and 'const' throw more exceptions as they behave more strictly than 'var'
+* `let` is block scoped and is **hoisted** to the top of it's **block**, unlike `var` which is hoisted to the top of it's **function** or **script**
+* `const` is also block scoped and is also hoisted to the top of it's block
+    * it's worth noting that in ES6 functions are **block scoped** instead of lexically scoped
+'let`
+
 ## Parameter Handling
 
 ## Destructuring Assignment
