@@ -117,12 +117,7 @@ console.log( x ); // 7
 * `const` creates **immutable** variables, whilst `let` create **mutable** ones
 * a duplicate declaration of `let` will throw a **Reference Error** within a block or function
  * this is also known as `TDZ` or temporal dead zone
-* _Basic rules to follow_: 
- * don't use `var`, or leave it as a signal in untouched legacy code.
- * use `let` when you want to rebind.
- * prefer `const` for variables that never change.
- * don't blindly refactor legacy code when replacing `var` with `let` and `const`.
- 
+
 > How `let` works: 
  
  ``` javascript
@@ -172,14 +167,18 @@ function letBlocks {
 }  
 ```
 
-> Unlike `let` variables declared with `const` are immutable. Note that the values are **mutable** as demonstrated with the examples below:
+> Unlike `let` variables **declared** with `const` are immutable.
 
 ``` javascript
+// simply just creates an immutable binding
 const foo = '123';
 foo = '321';
 console.log( foo ); // TypeError
+```
 
-// changing const values
+> Take into consideration that `const` creates an **immutable binding**, you can still change it's value. If you truly want the value to be **immutable** use `object.freeze`.
+
+``` Javascript
 const myarr = [1,2,3,4];
 myarr.push(5);
 console.log( myarr ); // => 1, 2, 3, 4, 5
@@ -188,7 +187,20 @@ const obj = {};
 obj.prop = 123;
 console.log( obj ); // => { Object: prop: 123 }
 obj = {}; // => TypeError
+
+// using object freeze to create `immutable value`
+const bar = Object.freeze({
+  'baz': 27
+});
+bar.baz = 42; // TypeError
+console.log(foo.bar); // => 27
 ```
+
+_Basic rules to follow_: 
+ * don't use `var`, or leave it as a signal in untouched legacy code.
+ * use `let` when you want to rebind.
+ * prefer `const` for variables that never change.
+ * don't blindly refactor legacy code when replacing `var` with `let` and `const`.
 
 ## Parameter Handling
 
