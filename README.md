@@ -123,7 +123,7 @@ console.log( x ); // 7
  * prefer `const` for variables that never change.
  * don't blindly refactor legacy code when replacing `var` with `let` and `const`.
  
-> how `let` works: 
+> How `let` works: 
  
  ``` javascript
  function myfunc() {
@@ -143,7 +143,7 @@ console.log( x ); // 7
    console.log( x ); // => 54321 
  }
 ``` 
-> using block scoped `let`:
+> Using block scoped `let`:
 
 ``` javascript
 let outer = "outer";
@@ -158,6 +158,20 @@ let outer = "outer";
 // you can access `outer` here
 // you cannot access `inner` and `nested` here 
 ```
+
+> More scoping rules for variables declared by `let` — you can clearly see that when refactoring legacy code you have to be careful:
+
+``` javascript
+function letBlocks {
+  let a = 23;
+  if ( true ) {
+    let a = 56;
+    console.log( a ); // => 56
+  }  
+  console.log( a ); // => 23
+}  
+```
+
 > how `const` works:
 
 ``` javascript
