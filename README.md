@@ -7,10 +7,12 @@ A list of ES6 / Harmony / ES2015 features, tips, tools and resources — standar
 * [Tools](#tools)
 * [Block Scoping](#block-scoping)
 * [Let and Const](let-and-const)
+* [Destructuring](#destructuring)
+* [Template Literals](#template-literals)
+* [Numbers and Strings](#numbers-and-strings)
 * [Parameter Handling](#parameter-handling)
-* [Destructuring Assignment](#destructuring-assignment)
-* [Classes](#classes)
 * [Modules](#modules)
+* [Classes](#classes)
 * [Template Literals](#template-literals)
 * [Generators](#generators)
 * [Arrow Functions](#arrow-functions)
@@ -117,8 +119,13 @@ console.log( x ); // 7
 * `const` creates **immutable** variables, whilst `let` create **mutable** ones
 * a duplicate declaration of `let` will throw a **Reference Error** within a block or function
  * this is also known as `TDZ` or temporal dead zone
-
-> How `let` works: 
+* _Basic rules to follow_: 
+ * don't use `var`, or leave it as a signal in untouched legacy code.
+ * use `let` when you want to rebind.
+ * prefer `const` for variables that never change.
+ * don't blindly refactor legacy code when replacing `var` with `let` and `const`.
+ 
+> how `let` works: 
  
  ``` javascript
  function myfunc() {
@@ -138,7 +145,7 @@ console.log( x ); // 7
    console.log( x ); // => 54321 
  }
 ``` 
-> Using block scoped `let`:
+> using block scoped `let`:
 
 ``` javascript
 let outer = "outer";
@@ -154,7 +161,7 @@ let outer = "outer";
 // you cannot access `inner` and `nested` here 
 ```
 
-> More scoping rules for variables declared by `let` — you can clearly see that when refactoring legacy code you have to be careful:
+> more scoping rules for variables declared by `let`. you can clearly see that when refac:
 
 ``` javascript
 function letBlocks {
@@ -167,18 +174,14 @@ function letBlocks {
 }  
 ```
 
-> Unlike `let` variables **declared** with `const` are immutable.
+> How `const` works. Variables declared with `const` are immutable, but note that the values aren't just the declarations:
 
 ``` javascript
-// simply just creates an immutable binding
 const foo = '123';
 foo = '321';
 console.log( foo ); // TypeError
-```
 
-> Take into consideration that `const` creates an **immutable binding**, you can still change it's value. If you truly want the value to be **immutable** use `object.freeze`.
-
-``` Javascript
+// changing const values
 const myarr = [1,2,3,4];
 myarr.push(5);
 console.log( myarr ); // => 1, 2, 3, 4, 5
@@ -186,31 +189,22 @@ console.log( myarr ); // => 1, 2, 3, 4, 5
 const obj = {};
 obj.prop = 123;
 console.log( obj ); // => { Object: prop: 123 }
-obj = {}; // => TypeError
-
-// using object freeze to create `immutable value`
-const bar = Object.freeze({
-  'baz': 27
-});
-bar.baz = 42; // TypeError
-console.log(foo.bar); // => 27
 ```
-
-_Basic rules to follow_: 
- * don't use `var`, or leave it as a signal in untouched legacy code.
- * use `let` when you want to rebind.
- * prefer `const` for variables that never change.
- * don't blindly refactor legacy code when replacing `var` with `let` and `const`.
-
-## Parameter Handling
 
 ## Destructuring Assignment
 
-## Classes
+Just like an object literal is a convenient way to construct an object, ES6 destructing allows you to extract values from data stored in objects and arrays
+
+
+## Template Literals
+
+## Numbers and Strings
+
+## Parameter Handling
 
 ## Modules
 
-## Template Literals
+## Classes
 
 ## Generators
 
