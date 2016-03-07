@@ -172,16 +172,22 @@ function letBlocks {
 }  
 ```
 
-> how `const` works:
+> Unlike `let` variables declared with `const` are immutable. Note that the values are **mutable** as demonstrated with the examples below:
 
 ``` javascript
-let quux = '123';
-baz = quux;
-console.log( baz ); // => 123
-
 const foo = '123';
 foo = '321';
 console.log( foo ); // TypeError
+
+// changing const values
+const myarr = [1,2,3,4];
+myarr.push(5);
+console.log( myarr ); // => 1, 2, 3, 4, 5
+
+const obj = {};
+obj.prop = 123;
+console.log( obj ); // => { Object: prop: 123 }
+obj = {}; // => TypeError
 ```
 
 ## Parameter Handling
