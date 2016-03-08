@@ -253,7 +253,7 @@ const b = `You can use template literals in multiline
 statements without using \\n`;
 console.log( b ); // => yup, it works!
 
-const c = `Some string text ${expression}`
+const c = `Some string text ${expression}`;
 ```
 
 > Use the following syntax to `embed` expressions within template literals
@@ -264,7 +264,7 @@ const a = 100,
 console.log(`The sum of ${a} * ${b} is ${a * b}`); 
 // => The sum of 100 * 100 is 1000
 
-var user = { name: `Ahad Bokhari` };
+const user = { name: `Ahad Bokhari` };
 console.log(`You are now logged in, ${ user.name.toUpperCase() }. `);
 // => You are now logged in AHAD BOKHARI
 ```
