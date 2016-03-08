@@ -13,7 +13,6 @@ A list of ES6 / Harmony / ES2015 features, tips, tools and resources — standar
 * [Parameter Handling](#parameter-handling)
 * [Modules](#modules)
 * [Classes](#classes)
-* [Template Literals](#template-literals)
 * [Generators](#generators)
 * [Arrow Functions](#arrow-functions)
 * [Map](#map)
@@ -191,9 +190,40 @@ obj.prop = 123;
 console.log( obj ); // => { Object: prop: 123 }
 ```
 
-## Destructuring Assignment
+## Destructuring
 
-Just like an object literal is a convenient way to construct an object, ES6 destructing allows you to extract values from data stored in objects and arrays
+Just like an object literal is a convenient way to construct an object, ES6 destructing allows you to extract values from data stored in objects or arrays.
+
+``` javascript
+// == Objects
+const myObj = { firstname: 'Ahad', lastname: 'Bokhari' };
+const { firstName: fname, lastName: lname }; = myObj
+console.log( fname, lname ); // => Ahad Bokhari
+
+let a, b;
+({ a, b } = {a: 1, b: 2});
+console.log(a, b);
+
+// deeper objects
+const {
+  prop1: z,
+  prop2: {
+    prop2: {
+      nested: [ , , c]
+    }
+  }
+} = { prop1: "Hello", prop2: { prop2: { nested: ["a", "b", "c"]}}};
+console.log(z, c);
+
+// == Arrays
+const myArr = [ 'y', 'z'];
+const [ a, b ] = myArr;
+console.log( a, b ); // => y, z
+```
+
+
+
+
 
 
 ## Template Literals
