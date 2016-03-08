@@ -193,9 +193,14 @@ console.log( obj ); // => { Object: prop: 123 }
 ## Destructuring
 
 Just like an object literal is a convenient way to construct an object, ES6 destructing allows you to extract values from data stored in objects or arrays.
+* You can assign to more than just **variables**
+* Destructuring can be used in **assignments**, **variable declarations** and **parameters**
+* `spread` and `rest` operators work with destructuring
+* You can destructure a `for-of` loop
+
+> Objects:
 
 ``` javascript
-// == Objects
 const myObj = { firstname: 'Ahad', lastname: 'Bokhari' };
 const { firstName: fname, lastName: lname }; = myObj
 console.log( fname, lname ); // => Ahad Bokhari
@@ -212,22 +217,59 @@ const {
       nested: [ , , c]
     }
   }
-} = { prop1: "Hello", prop2: { prop2: { nested: ["a", "b", "c"]}}};
+} = { prop1: "Hello", prop2: { prop2: { nested: ["a", "b", "c"] }}};
 console.log(z, c);
+```
 
-// == Arrays
+> Arrays:
+
+``` javascript
 const myArr = [ 'y', 'z'];
 const [ a, b ] = myArr;
 console.log( a, b ); // => y, z
+
+let [ a, , b ] = [ 'x', 'y', 'z' ];
+console.log( a, b );
+
+// deeper arrays
+const [ a, [b, [c, d]]] = [1, [2, [[[3, 4], 5], 6 ]]];
+console.log("a:", a, "b:", b, "c:", c, "d:", d); // => a: 1 b: 2 c: [ [ 3, 4 ], 5 ] d: 6
 ```
 
-
-
-
-
-
 ## Template Literals
+We all know that JavaScript `strings` are limited and lacking in capabality, especially if you're coming from **Ruby** or **Python**. Template literals are a feature that developers will love and are basically just `string literals` allowing `embedded expressions`.
+* `ES6` introduces `string interpolation`, `string formatting`, `multiline strings` and `embedded expressions` with template literals
+* Template strings use (``) rather than single or double quotes used with regular strings
+* Placeholders using the `${ }` syntax are used from string substition and works fine with any kind of **expression**
+ * expressions in between the placeholders (${expression}) and text b/w them get passed to a function
+  
+> Familiarize yourself with the `syntax`:
 
+``` javascript
+const a = `this is a template literal`;
+console.log( typeof a ); // => string
+
+const b = `You can use template literals in multiline
+statements without using \\n`;
+console.log( b ); // => yup, it works!
+
+const c = `Some string text ${expression}`
+```
+
+> Use the following syntax to `embed` expressions within template literals
+
+``` javascript
+const a = 100,
+      b = 100;
+console.log(`The sum of ${a} * ${b} is ${a * b}`); 
+// => The sum of 100 * 100 is 1000
+
+var user = { name: `Ahad Bokhari` };
+console.log(`You are now logged in, ${ user.name.toUpperCase() }. `);
+// => You are now logged in AHAD BOKHARI
+```
+
+   
 ## Numbers and Strings
 
 ## Parameter Handling
