@@ -297,9 +297,11 @@ export const quux = Math.sqrt( 2 ); // => exports a constant
 export function multiply( x, y ) {
   return x * y;
 } // => exports a function
+
 export function addContact( id, callback ) {
   callback();
 } // => exports a function
+
 export function refreshContact() {
   alert( `Hello ES6 Modules` );
 } // => exports a function
@@ -320,8 +322,8 @@ console.log(addContact(1, refreshContact)); // => alerts `Hello ES6 Modules`
 // import the whole module
 import * as lib from 'lib'
 
-console.log( quux ); // => 1.4142135623730951
-console.log( refreshContact() ); // => alerts `Hello ES6 Modules`
+console.log( lib.quux ); // => 1.4142135623730951
+console.log( lib.refreshContact() ); // => alerts `Hello ES6 Modules`
 ```
 > Another technique in a module, we could use the following:
 
@@ -329,6 +331,8 @@ console.log( refreshContact() ); // => alerts `Hello ES6 Modules`
 const quatro = 10 * 10 * 10 * 10;
 export { quatro }; 
 ```
+
+> `default` exports is simple one module that you want to export as the default ( like CommonJS ) and it turns out you can use `default` exports and `named` exports both in your module. There is alot more on `modules` in `ES6` including `script` tags, using `promises` and `module loading` which is an API that allows you to programmatically work with modules and configure module loading. 
 
 
 
