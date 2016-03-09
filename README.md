@@ -313,7 +313,6 @@ import { multiply, addContact, refreshContact } from 'lib';
 console.log( quux ); // => 1.4142135623730951
 console.log( multiply(10, 10); // => 1000
 console.log(addContact(1, refreshContact)); // => alerts `Hello ES6 Modules`
-
 // app.js
 // ------
 // import the whole module
@@ -322,6 +321,7 @@ console.log( quux ); // => 1.4142135623730951
 console.log( refreshContact() ); // => alerts `Hello ES6 Modules`
 ```
 > Another technique in a module, we could use the following:
+
 ``` javascript
 const quatro = 10 * 10 * 10 * 10;
 export { quatro }; 
