@@ -311,6 +311,7 @@ export function refreshContact() {
 // -------
 import quux from 'lib';
 import { multiply, addContact, refreshContact } from 'lib';
+
 console.log( quux ); // => 1.4142135623730951
 console.log( multiply(10, 10); // => 1000
 console.log(addContact(1, refreshContact)); // => alerts `Hello ES6 Modules`
@@ -318,6 +319,7 @@ console.log(addContact(1, refreshContact)); // => alerts `Hello ES6 Modules`
 // ------
 // import the whole module
 import * as lib from 'lib'
+
 console.log( quux ); // => 1.4142135623730951
 console.log( refreshContact() ); // => alerts `Hello ES6 Modules`
 ```
