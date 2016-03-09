@@ -1,5 +1,5 @@
 # ES6
-A list of ES6 / Harmony / ES2015 features, tips, tools and resources — standardization and implementation might take a while to reach the point where ECMAScript6 is widely adopted by developers, but it's **wise to adopt today what we'll see tomorrow**.
+An introduction to ES6 features to get you up to speed with what the future will look like — things have changed and the `ES6` spec has added syntax that devs will love. It's **wise to adopt today** what **we'll see tomorrow**.
 
 ## Table of Contents
 * [ECMA History](#history)
@@ -20,6 +20,7 @@ A list of ES6 / Harmony / ES2015 features, tips, tools and resources — standar
 
 ## History
 * ECMAScript is now 17 years old with it's birth in 1997 
+  * JavaScript has drastically changed from just `validation` and `on change` handlers to projects with a huge code base
   * ECMAScript is the standard. `JavaScript`, `ActionScript` and `JScript` are implementations of it.
   * The language was invented by Brendan Eich at Netscape in just under two weeks.
   * It first appeared in Navigator 2.0 browser and has appeared in all subsequent browsers from Netscape and in all browsers from Microsoft starting with Internet Explorer 3.0. 
@@ -276,14 +277,39 @@ console.log(`You are now logged in, ${ user.name.toUpperCase() }. `);
 
 ## Modules
 
-Without support for modules natively in ECMAScript there has been a community created effort to implement work-arounds — CommonJS and AMD being the most prevelant as
-they both have communities that rally around them, but unfortunately they are incompatible with each other. The good news is ES6, ( TC39 group ) has finalized a module syntax which developers can greatly benefit from.
+At the core of modularity developers need a module system — a way to spread their work across numerous files and directories with access to each other. Without support for modules natively in ECMAScript there has been a community created effort to implement work-arounds — CommonJS and AMD being the most prevelant as
+they both have communities that rally around them, but are incompatible with each other. The good news is ES6, ( TC39 group ) has finalized a module syntax which developers can greatly benefit from using the best from both worlds.
 * The goal of modules in `ES6` is to keep **both** `CommonJS` and `AMD` user happy with a single format and borrows the best from both worlds
  * `ES6` modules will have a compact syntax with a preference for a single exports ( such as CommonJS )
  * direct support for asynchronous and configurable module loading is supported
 * There are two types of exports, `named` exports and `default` exports
  * **named exports** can be used to export multiple things using the keyword `export`
  * **default exports** used to export a default single value
+* To import functions, objects and primitives that have been exported from an external module use the `import` statement
+ * you may `import` an entire modules contents, a single member or multiple members in a module
+ 
+``` javascript
+// lib.js
+// -------
+export const quux = Math.sqrt( 2 ); // => exports a constant
+export function multiply( x, y ) {
+  return x * y;
+} // => exports a function
+export function addContact( id, callback ) {
+  callback();
+}
+export function refreshContact() {
+  alert( `Hello World` );
+}
+
+// main.js
+// -------
+import quux from 'lib';
+import { multiply, addContact, refreshContact } from 'lib';
+console.log( multiply(10, 10); // => 1000
+addContact(1, refreshContact); // => alerts `Hello ES Modules`
+```
+ 
 
 ## Classes
 
