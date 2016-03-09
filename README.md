@@ -287,6 +287,8 @@ they both have communities that rally around them, but are incompatible with eac
  * **default exports** used to export a default single value
 * To import functions, objects and primitives that have been exported from an external module use the `import` statement
  * you may `import` an entire modules contents, a single member or multiple members in a module
+
+> A convenient way to specify `named` exports as below:
  
 ``` javascript
 // lib.js
@@ -297,19 +299,35 @@ export function multiply( x, y ) {
 } // => exports a function
 export function addContact( id, callback ) {
   callback();
-}
+} // => exports a function
 export function refreshContact() {
-  alert( `Hello World` );
-}
-
+  alert( `Hello ES6 Modules` );
+} // => exports a function
+```
+> And of course `import` them into another file:
+``` javascript
 // main.js
 // -------
 import quux from 'lib';
 import { multiply, addContact, refreshContact } from 'lib';
+console.log( quux ); // => 1.4142135623730951
 console.log( multiply(10, 10); // => 1000
-addContact(1, refreshContact); // => alerts `Hello ES Modules`
+console.log(addContact(1, refreshContact)); // => alerts `Hello ES6 Modules`
+
+// app.js
+// ------
+// import the whole module
+import * as lib from 'lib'
+console.log( quux ); // => 1.4142135623730951
+console.log( refreshContact() ); // => alerts `Hello ES6 Modules`
 ```
- 
+> Another technique in a module, we could use the following:
+``` javascript
+const quatro = 10 * 10 * 10 * 10;
+export { quatro }; 
+```
+
+
 
 ## Classes
 
