@@ -276,6 +276,15 @@ console.log(`You are now logged in, ${ user.name.toUpperCase() }. `);
 
 ## Modules
 
+Without support for modules natively in ECMAScript there has been a community created effort to implement work-arounds — CommonJS and AMD being the most prevelant as
+they both have communities that rally around them, but unfortunately they are incompatible with each other. The good news is ES6, ( TC39 group ) has finalized a module syntax which developers can greatly benefit from.
+* The goal of modules in `ES6` is to keep **both** `CommonJS` and `AMD` user happy with a single format and borrows the best from both worlds
+ * `ES6` modules will have a compact syntax with a preference for a single exports ( such as CommonJS )
+ * direct support for asynchronous and configurable module loading is supported
+* There are two types of exports, `named` exports and `default` exports
+ * **named exports** can be used to export multiple things using the keyword `export`
+ * **default exports** used to export a default single value
+
 ## Classes
 
 ## Generators
