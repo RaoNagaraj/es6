@@ -305,6 +305,7 @@ export function refreshContact() {
 } // => exports a function
 ```
 > And of course `import` them into another file:
+
 ``` javascript
 // main.js
 // -------
