@@ -342,6 +342,36 @@ export { quatro };
 
 ## Arrow Functions
 
+Arrow functions are one of the more popular features of `ES6` saving developer time and simplifying function scope. 
+* The arrow `(=>)` or `fat arrow` provides a shorthand for the function keyword with lexical `this` binding
+ * Arrow functions change the way `this` binds in functions
+ * They work much like `lambdas` in languages like `C#` or `Python`
+  * `lambda` expressions are are often passed as arguments to **higher order functions**
+ * we avoid the `function` keyword, `return` keyword and `curly brackets` when using arrow functions
+
+> For the sake of simplicity, we could do the following:
+
+``` javascript
+const msg = () => alert("Hello Arrow Function");
+console.log(msg());
+```
+
+``` javascript
+let square = ( a, b ) => a * b; 
+console.log(square(5, 5)); // 25
+```
+
+``` javascript
+let x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let z = x.map(x => x); 
+console.log(z); // [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+```
+
+
+
+
+
+
 ## Map
 
 ## Promises
