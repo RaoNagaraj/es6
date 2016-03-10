@@ -346,8 +346,10 @@ Arrow functions are one of the more popular features of `ES6` saving developer t
 * The arrow `(=>)` or `fat arrow` provides a shorthand for the function keyword with lexical `this` binding
  * Arrow functions change the way `this` binds in functions
  * They work much like `lambdas` in languages like `C#` or `Python`
-  * `lambda` expressions are are often passed as arguments to **higher order functions**
+   * `lambda` expressions are are often passed as arguments to **higher order functions**
  * we avoid the `function` keyword, `return` keyword and `curly brackets` when using arrow functions
+* Arrow functions allow developers to remove boilerplate, however you shouldn't remain ignorant of how 'lexical` scoping `this` works 
+* Be careful when using `arrow functions` as they aren't applicable everywhere, **use cases** will depend from situation to situation
 
 > For the sake of simplicity, we could do the following:
 
@@ -367,7 +369,34 @@ let z = x.map(x => x);
 console.log(z); // [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 ```
 
+> Every new function defines it's own `this` value.
 
+``` javascript
+// in ES5
+function Animal() {
+  that = this;
+  that.age = 0;
+  
+  setInterval(function ageGracefully() {
+    that.age++;
+  }, 1000);  
+}
+
+var a = new Animal();
+
+// in ES6
+function Animal() {
+  that = this;
+  this.age = 0;
+  
+  setInterval(() => {
+    this.age++;
+     1000);
+  }
+}
+     
+var a = new Animal();
+```
 
 
 
