@@ -1,5 +1,5 @@
 # ES6
-An introdcutory repo to ramp you up with `ES6` features, tools and syntax. Check back from time to time as 
+An introdcutory repo to ramp you up quickly with `ES6` features, tools and syntax - there's even a short section on `ES7`. Be sure to read the **contributions** section and check back from time to time for intermittent updates.
 
 ## Table of Contents
 * [ECMA Brief History](#history)
