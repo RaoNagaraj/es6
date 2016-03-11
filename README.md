@@ -422,6 +422,39 @@ export { quatro };
 
 ## Classes
 
+Classes are a welcome addition in `ES6` however do not introduce a new OO model and rather are just `syntactical sugar` over JavaScript's
+existing prototype-based-inheritance model.
+* Roughly there are two methods to define a class: one way to to define a **class** is by using the `class` keyword and the other is
+simply a `class expression`
+* The `constructor` creates and initializes an object created with a `class` and their `bodies` are executed in **strict mode**
+
+``` javascript
+class Atom {
+  constructor( name, mass, neutrons ) {
+    this.name = name;
+    this.mass = mass;
+    this.neutrons = neutrons;
+  }
+  
+  get mass() {
+    return this.mass;
+  }
+  
+  get neutrons() {
+    return this.neutrons;
+  }
+  
+  toString() {
+    return `${this.make} ${this.year}`;
+  }
+}
+  
+ const mote = new Atom('Mote', 100000, 1000);
+  
+ console.log(mote.mass); // 100000
+ console.log(mote.neutrons); 1000
+``` 
+
 ## Generators
 
 ## Arrow Functions
