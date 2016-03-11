@@ -42,7 +42,7 @@ _A brief snapshot of it's history:_
 | 6        | 2015          |      Significant features added, that's why you're here                                  |
 | 6        | unreleased    |      Early stages of development                                                         |
 
-[&#8593; Back to TOC](#table-of-contents)
+&#8593; [Back to TOC](#table-of-contents)
 
 ## ES6 Introduction
 `ES6` is the newest addition to the language and adds **significant** new syntax for writing complex JavaScript applications.
@@ -50,7 +50,7 @@ _A brief snapshot of it's history:_
  * 'ES6' is the first **ECMAScript Harmony** specification and is also known as `ES Harmony`, `ES2015`, `ES.next` but commonly referred to as `ES6`.
 * The specification was finalized in `June 2015`as it reached `feature complete` status
   * Subsequent versions will be released on a 12 month cadence, and will be dubbed `ES7`, `ES2016` respectively.
-  
+
 [&#8593; Back to TOC](#table-of-contents)  
 
 ## Tools
@@ -80,7 +80,7 @@ _Node has decent built in support for `ES6` thanks for the `V8` engine:_
  * Staged: almost-complete features that are not considered stable
  * In progress: features can be individually activated by their respective harmony flag `--harmony_destrucuting`
 
-[&#8593; Back to TOC](#table-of-contents)
+&#8593; [Back to TOC](#table-of-contents)
  
 ## Block Scoping
 ES6 introduces block scoping:
@@ -116,7 +116,7 @@ var x = 7;
 console.log( x ); // 7  
 ```
 
-[&#8593; Back to TOC](#table-of-contents)
+&#8593; [Back to TOC](#table-of-contents)
     
 ## Let and Const
 
@@ -202,7 +202,7 @@ obj.prop = 123;
 console.log( obj ); // => { Object: prop: 123 }
 ```
 
-[&#8593; Back to TOC](#table-of-contents)
+&#8593; [Back to TOC](#table-of-contents)
 
 ## Destructuring
 
@@ -250,7 +250,7 @@ const [ a, [b, [c, d]]] = [1, [2, [[[3, 4], 5], 6 ]]];
 console.log("a:", a, "b:", b, "c:", c, "d:", d); // => a: 1 b: 2 c: [ [ 3, 4 ], 5 ] d: 6
 ```
 
-[&#8593; Back to TOC](#table-of-contents)
+&#8593; [Back to TOC](#table-of-contents)
 
 ## String and Template Literals
 We all know that JavaScript `strings` are limited and lacking in capabality, especially if you're coming from **Ruby** or **Python**. Template literals are a feature that developers will love and are basically just `string literals` allowing `embedded expressions`.
@@ -285,7 +285,7 @@ console.log(`You are now logged in, ${ user.name.toUpperCase() }. `);
 // => You are now logged in AHAD BOKHARI
 ```
 
-[&#8593; Back to TOC](#table-of-contents)
+&#8593; [Back to TOC](#table-of-contents)
 
 ## Math and Number 
 
@@ -294,7 +294,7 @@ console.log(`You are now logged in, ${ user.name.toUpperCase() }. `);
 * `Number.MAX_SAFE_INTEGER`, `Number.MIN_SAFE_INTEGER` are the largest and smalled integer that are represented in JavaScript
 * The math object has also received some useful methods in `ES6`, `Math.sign`, `Math.trunc`, `Math.cbrt`
 
-[&#8593; Back to TOC](#table-of-contents)
+&#8593; [Back to TOC](#table-of-contents)
 
 ## Arrays
 
@@ -353,7 +353,7 @@ for( let entry of fruits.entries() ) {
 }
 ```
 
-[&#8593; Back to TOC](#table-of-contents)
+&#8593; [Back to TOC](#table-of-contents)
 
 ## Rest Paramater and Spread Operator
 
@@ -416,7 +416,7 @@ export { quatro };
 
 > `default` exports is simple one module that you want to export as the default ( like CommonJS ) and it turns out you can use `default` exports and `named` exports both in your module. There is alot more on `modules` in `ES6` including `script` tags, using `promises` and `module loading` which is an API that allows you to programmatically work with modules and configure module loading. 
 
-[&#8593; Back to TOC](#table-of-contents)
+&#8593; [Back to TOC](#table-of-contents)
 
 ## Classes
 
@@ -479,7 +479,7 @@ function Tree() {
 var t = new Tree();
 ```
 
-[&#8593; Back to TOC](#table-of-contents)
+&#8593; [Back to TOC](#table-of-contents)
 
 ## Map and WeakMap
 
