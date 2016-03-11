@@ -369,37 +369,33 @@ let z = x.map(x => x);
 console.log(z); // [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 ```
 
-> Every new function defines it's own `this` value.
+> Every new function defines it's own `this` value, yet `arrow` functions **close** over the `this` value
 
 ``` javascript
 // in ES5
-function Animal() {
+function Tree() {
   that = this;
   that.age = 0;
   
-  setInterval(function ageGracefully() {
+  setInterval(function growOld() {
     that.age++;
   }, 1000);  
 }
 
-var a = new Animal();
+var t = new Tree();
 
 // in ES6
-function Animal() {
-  that = this;
+function Tree() {
   this.age = 0;
   
   setInterval(() => {
     this.age++;
-     1000);
+     5000);
   }
 }
      
-var a = new Animal();
+var t = new Tree();
 ```
-
-
-
 
 ## Map
 
