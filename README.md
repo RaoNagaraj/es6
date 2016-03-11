@@ -321,6 +321,7 @@ console.log( arr ); //[ true, null, undefined, "some message", 50]
 
 > Examples of additional `array` methods:
 
+``` javascript
 // copyWithin()
 [1, 2, 3, 4, 5].copyWithin(0, 3); // => [4, 5, 3, 4, 5]
 
