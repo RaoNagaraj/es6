@@ -1,5 +1,5 @@
 # ES6
-An introduction to ES6 features to get you up to speed with what the future will look like — things have changed and the `ES6` spec has added syntax that devs will love. It's **wise to adopt today** what **we'll see tomorrow**.
+An introdcutory repo to ramp you up with `ES6` features, tools and syntax. Check back from time to time as 
 
 ## Table of Contents
 * [ECMA Brief History](#history)
@@ -20,6 +20,8 @@ An introduction to ES6 features to get you up to speed with what the future will
 * [Map & WeakMap](#map-and-weakmap)
 * [Set & WeakSet](#set-and-weakset)
 * [Promises](#promises)
+* [Contributions](#contributions)
+* [ES7 - ES2016](#es7) :star:
 
 ## History
 * ECMAScript is now 17 years old with it's birth in 1997 
