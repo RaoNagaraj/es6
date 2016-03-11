@@ -9,13 +9,14 @@ An introduction to ES6 features to get you up to speed with what the future will
 * [Let and Const](let-and-const)
 * [Destructuring](#destructuring)
 * [Template Literals](#template-literals)
-* [Numbers and Strings](#numbers-and-strings)
+* [Numbers, String, Array](#numbers-and-strings)
 * [Parameter Handling](#parameter-handling)
 * [Modules](#modules)
 * [Classes](#classes)
+* [Symbols](#symbols)
 * [Generators](#generators)
 * [Arrow Functions](#arrow-functions)
-* [Map](#map)
+* [Map, WeakMap, Set, WeakSet](#map)
 * [Promises](#promises)
 
 ## History
@@ -270,8 +271,11 @@ console.log(`You are now logged in, ${ user.name.toUpperCase() }. `);
 // => You are now logged in AHAD BOKHARI
 ```
 
-   
-## Numbers and Strings
+## Math, Strings and Arrays
+
+`ES6` has a plethora of new features for numbers, strings and arrays
+* Additions to `integer literals` have been added included `octal` and `binary` literals
+* Methods that have been added to `Number` apart from the usual four suspects are, `number.EPSILON`, `number.isInteger`, `number.isNaN`, `number.isFinite`, `number.isSafeInteger`
 
 ## Parameter Handling
 
