@@ -271,11 +271,29 @@ console.log(`You are now logged in, ${ user.name.toUpperCase() }. `);
 // => You are now logged in AHAD BOKHARI
 ```
 
-## Math, Strings and Arrays
+## Numbers and Math 
 
 `ES6` has a plethora of new features for numbers, strings and arrays
 * Additions to `integer literals` have been added included `octal` and `binary` literals
-* Methods that have been added to `Number` apart from the usual four suspects are, `number.EPSILON`, `number.isInteger`, `number.isNaN`, `number.isFinite`, `number.isSafeInteger`
+* Methods that have been added to `Number` apart from the usual four suspects are, `Number.EPSILON`, `Number.isInteger`, `Number.isNaN`, `Number.isFinite`, `number.isSafeInteger`
+* `Number.MAX_SAFE_INTEGER`, `Number.MIN_SAFE_INTEGER` are the largest and smalled integer that are represented in JavaScript
+* The math object has also received some useful methods in `ES6`, `Math.sign`, `Math.trunc`, `Math.cbrt`
+
+## Arrays
+
+Arrays have some very cool and useful features packaged with `ES6`
+
+* Array: `from`, `of`
+* Array.prototype: `findIndex()`, `fill()`, `find()`, `copyWithin()`, `keys()`, `values()`, `entries()`
+
+> Create a new array instance from an `array-like` or `iterable object` 
+
+```javascript
+var doc = document.querySelectorAll('*');
+Array.from(doc).forEach(function(nodes) {
+  console.log(nodes);
+});
+```
 
 ## Parameter Handling
 
