@@ -2,27 +2,29 @@
 An introduction to ES6 features to get you up to speed with what the future will look like — things have changed and the `ES6` spec has added syntax that devs will love. It's **wise to adopt today** what **we'll see tomorrow**.
 
 ## Table of Contents
-* [ECMA History](#history)
+* [ECMA Brief History](#history)
 * [Introduction](#es6-introduction)
 * [Tools](#tools)
 * [Block Scoping](#block-scoping)
 * [Let and Const](let-and-const)
 * [Destructuring](#destructuring)
-* [Template Literals](#template-literals)
-* [Numbers, String, Array](#numbers-and-strings)
-* [Parameter Handling](#parameter-handling)
+* [String & Template Literals](#string-and-template-literals)
+* [Math & Number](#numbers-and-strings)
+* [Arrays](#arrays)
+* [Rest Parameter & Spread Operator](#spread-and-rest)
 * [Modules](#modules)
 * [Classes](#classes)
 * [Symbols](#symbols)
 * [Generators](#generators)
 * [Arrow Functions](#arrow-functions)
-* [Map, WeakMap, Set, WeakSet](#map)
+* [Map & WeakMap](#map-and-weakmap)
+* [Set & WeakSet](#set-and-weakset)
 * [Promises](#promises)
 
 ## History
 * ECMAScript is now 17 years old with it's birth in 1997 
-  * JavaScript has drastically changed from just `validation` and `on change` handlers to projects with a huge code base
   * ECMAScript is the standard. `JavaScript`, `ActionScript` and `JScript` are implementations of it.
+  * JavaScript has drastically changed from just `validation` and `on change` handlers to projects with a huge code base
   * The language was invented by Brendan Eich at Netscape in just under two weeks.
   * It first appeared in Navigator 2.0 browser and has appeared in all subsequent browsers from Netscape and in all browsers from Microsoft starting with Internet Explorer 3.0. 
 
@@ -40,30 +42,34 @@ _A brief snapshot of it's history:_
 | 6        | 2015          |      Significant features added, that's why you're here                                  |
 | 6        | unreleased    |      Early stages of development                                                         |
 
+[&#8593; Back to TOC](#table-of-contents)
+
 ## ES6 Introduction
 `ES6` is the newest addition to the language and adds **significant** new syntax for writing complex JavaScript applications.
  * There is 5 years between `ES5` and `ES6`.  
  * 'ES6' is the first **ECMAScript Harmony** specification and is also known as `ES Harmony`, `ES2015`, `ES.next` but commonly referred to as `ES6`.
 * The specification was finalized in `June 2015`as it reached `feature complete` status
   * Subsequent versions will be released on a 12 month cadence, and will be dubbed `ES7`, `ES2016` respectively.
+  
+[&#8593; Back to TOC](#table-of-contents)  
 
 ## Tools
 You should want to experiment and play around with code — it's easy to get up and running. There are several techniques and the premise all these tools are built upon is called `transpiling`, or **JavaScript to JavaScript** transpiling which compiles the latest version into older versions.
 * Transpilation is the future for future ECMAScript such as `ES2015` and `ES2016`
-* The most popular JavaScript transpilers are `Babel` and was previously known as `6to5`
+* The most popular JavaScript transpilers are `Babel` and was previously known as `6to5` and `traceur`
 * Transpilation is possible to incorporate into your build process using [Broccoli](), [Gulp](), [Browserify](), [RequireJS](), [Webpack]() et al and friends.
 
-_The easiest way to get up and running in the web browser:_
+_The easiest way to get up and running in the `web browser`:_
 
 * In the web browser you can use the online `Babel REPL` — this compiles `ES6` to `ES5` and you don't have to install anything.
 * Another web based tool is `Scratch JS` and comes in the form of a chrome extension. This interactive playground let's you transpile your code in the all familiar `dev tools` environment.
 
-_If you prefer the command line:_
+_If you prefer the `command line`:_
 a
 * Use Node,js v4.x.x or `>`, they support is in-built for Babel
 * Run `npm install -g babel' and `babel node`
 
-_Using an IDE_
+_Using an `IDE`:_
 
 * You can easily use `Babel` to transpile your code in **Webstorm**, the setup won't take more than a couple of moments.
 
@@ -73,6 +79,8 @@ _Node has decent built in support for `ES6` thanks for the `V8` engine:_
  * Shipping: which do not require a **runtime flag**
  * Staged: almost-complete features that are not considered stable
  * In progress: features can be individually activated by their respective harmony flag `--harmony_destrucuting`
+
+[&#8593; Back to TOC](#table-of-contents)
  
 ## Block Scoping
 ES6 introduces block scoping:
@@ -107,6 +115,8 @@ var x = 7;
 
 console.log( x ); // 7  
 ```
+
+[&#8593; Back to TOC](#table-of-contents)
     
 ## Let and Const
 
@@ -192,6 +202,8 @@ obj.prop = 123;
 console.log( obj ); // => { Object: prop: 123 }
 ```
 
+[&#8593; Back to TOC](#table-of-contents)
+
 ## Destructuring
 
 Just like an object literal is a convenient way to construct an object, ES6 destructing allows you to extract values from data stored in objects or arrays.
@@ -238,7 +250,9 @@ const [ a, [b, [c, d]]] = [1, [2, [[[3, 4], 5], 6 ]]];
 console.log("a:", a, "b:", b, "c:", c, "d:", d); // => a: 1 b: 2 c: [ [ 3, 4 ], 5 ] d: 6
 ```
 
-## Template Literals
+[&#8593; Back to TOC](#table-of-contents)
+
+## String and Template Literals
 We all know that JavaScript `strings` are limited and lacking in capabality, especially if you're coming from **Ruby** or **Python**. Template literals are a feature that developers will love and are basically just `string literals` allowing `embedded expressions`.
 * `ES6` introduces `string interpolation`, `string formatting`, `multiline strings` and `embedded expressions` with template literals
 * Template strings use (``) rather than single or double quotes used with regular strings
@@ -271,12 +285,16 @@ console.log(`You are now logged in, ${ user.name.toUpperCase() }. `);
 // => You are now logged in AHAD BOKHARI
 ```
 
-## Numbers and Math 
+[&#8593; Back to TOC](#table-of-contents)
+
+## Math and Number 
 
 * Additions to `integer literals` have been added included `octal` and `binary` literals
 * Methods that have been added to `Number` apart from the usual four suspects are, `Number.EPSILON`, `Number.isInteger`, `Number.isNaN`, `Number.isFinite`, `number.isSafeInteger`
 * `Number.MAX_SAFE_INTEGER`, `Number.MIN_SAFE_INTEGER` are the largest and smalled integer that are represented in JavaScript
 * The math object has also received some useful methods in `ES6`, `Math.sign`, `Math.trunc`, `Math.cbrt`
+
+[&#8593; Back to TOC](#table-of-contents)
 
 ## Arrays
 
@@ -303,7 +321,6 @@ console.log( arr ); //[ true, null, undefined, "some message", 50]
 
 > Examples of additional `array` methods:
 
-``` javascript
 // copyWithin()
 [1, 2, 3, 4, 5].copyWithin(0, 3); // => [4, 5, 3, 4, 5]
 
@@ -320,7 +337,7 @@ console.log( t );
 // keys()
 let people = ["Ahad", "Moe", "Zoey", "Snaey"];
 
-for( let entry of people.entries() ) {
+for( let entry of fruits.entries() ) {
   console.log(entry[0]);
   // 0
   // 1
@@ -335,7 +352,9 @@ for( let entry of people.entries() ) {
 }
 ```
 
-## Parameter Handling
+[&#8593; Back to TOC](#table-of-contents)
+
+## Rest Paramater and Spread Operator
 
 ## Modules
 
@@ -396,7 +415,7 @@ export { quatro };
 
 > `default` exports is simple one module that you want to export as the default ( like CommonJS ) and it turns out you can use `default` exports and `named` exports both in your module. There is alot more on `modules` in `ES6` including `script` tags, using `promises` and `module loading` which is an API that allows you to programmatically work with modules and configure module loading. 
 
-
+[&#8593; Back to TOC](#table-of-contents)
 
 ## Classes
 
@@ -459,6 +478,10 @@ function Tree() {
 var t = new Tree();
 ```
 
-## Map
+[&#8593; Back to TOC](#table-of-contents)
+
+## Map and WeakMap
+
+## Set and WeakSet
 
 ## Promises
