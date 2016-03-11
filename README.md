@@ -273,7 +273,6 @@ console.log(`You are now logged in, ${ user.name.toUpperCase() }. `);
 
 ## Numbers and Math 
 
-`ES6` has a plethora of new features for numbers, strings and arrays
 * Additions to `integer literals` have been added included `octal` and `binary` literals
 * Methods that have been added to `Number` apart from the usual four suspects are, `Number.EPSILON`, `Number.isInteger`, `Number.isNaN`, `Number.isFinite`, `number.isSafeInteger`
 * `Number.MAX_SAFE_INTEGER`, `Number.MIN_SAFE_INTEGER` are the largest and smalled integer that are represented in JavaScript
@@ -281,18 +280,58 @@ console.log(`You are now logged in, ${ user.name.toUpperCase() }. `);
 
 ## Arrays
 
-Arrays have some very cool and useful features packaged with `ES6`
+`ES6` brings an abundance of new Array methods
 
 * Array: `from`, `of`
 * Array.prototype: `findIndex()`, `fill()`, `find()`, `copyWithin()`, `keys()`, `values()`, `entries()`
 
-> Create a new array instance from an `array-like` or `iterable object` 
+> Using `Array.from` we create a new array instance from an `array-like` or `iterable object` 
 
 ```javascript
 var doc = document.querySelectorAll('*');
 Array.from(doc).forEach(function(nodes) {
   console.log(nodes);
 });
+```
+
+> Using `Array.of` we create an array of variable arguments passed to the function
+
+``` javascript
+var arr = Array.of(true, null, undefined, `some message`, 50);
+console.log( arr ); //[ true, null, undefined, "some message", 50]
+```
+
+> Examples of additional `array` methods:
+
+// copyWithin()
+[1, 2, 3, 4, 5].copyWithin(0, 3); // => [4, 5, 3, 4, 5]
+
+let letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
+letters.copyWithin(4, 0); // => there is an optional parameter copyWithin(4, 0, 2)
+console.log(letters); // ["A", "B", "C", "D", "A", "B", "C", "D", "E", "F"]
+
+// find()
+let cities = ["Beirut", "Karachi", "Islamabad", "Athens", "Kabul", "Tapei", "Bucharest"];
+
+let t = cities.find(char => char.endsWith("t"));
+console.log( t ); 
+
+// keys()
+let people = ["Ahad", "Moe", "Zoey", "Snaey"];
+
+for( let entry of people.entries() ) {
+  console.log(entry[0]);
+  // 0
+  // 1
+  // 2
+  // 3
+  
+  console.log(entry[1]);
+  // Ahad
+  // Moe
+  // Zoey
+  // Snaey
+}
 ```
 
 ## Parameter Handling
