@@ -13,6 +13,7 @@ An introdcutory repo to ramp you up quickly with `ES6` features, tools and synta
 * [Arrays](#arrays)
 * [Rest Parameter & Spread Operator](#spread-and-rest)
 * [Modules](#modules)
+* [Getters & Setters](#getters-and-setters)
 * [Classes](#classes)
 * [Symbols](#symbols)
 * [Generators](#generators)
@@ -420,6 +421,8 @@ export { quatro };
 
 &#8593; [Back to TOC](#table-of-contents)
 
+## Getters and Setters
+
 ## Classes
 
 Classes are a welcome addition in `ES6` however do not introduce a new OO model and rather are just `syntactical sugar` over JavaScript's
@@ -431,28 +434,33 @@ simply a `class expression`
 ``` javascript
 class Atom {
   constructor( name, mass, neutrons ) {
-    this.name = name;
-    this.mass = mass;
-    this.neutrons = neutrons;
+    this._name = name;
+    this._mass = mass;
+    this._neutrons = neutrons;
+  }
+  // using get 	
+  get name() {
+    return this._name;
   }
   
   get mass() {
-    return this.mass;
+    return this._mass;
   }
-  
+
   get neutrons() {
-    return this.neutrons;
+    return this._neutrons;
   }
-  
+
   toString() {
-    return `${this.make} ${this.year}`;
+    return `${this.name}'s mass index is ${this.mass}, and is composed of ${this.neutrons} neutrons` ;
   }
 }
-  
- const mote = new Atom('Mote', 100000, 1000);
-  
- console.log(mote.mass); // 100000
- console.log(mote.neutrons); 1000
+
+const particle = new Atom('Mote', 100000, 1000);
+
+console.log(particle.mass); 
+console.log(particle.neutrons);
+console.log(particle.toString());
 ``` 
 
 ## Generators
