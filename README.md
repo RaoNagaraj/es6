@@ -427,8 +427,10 @@ export { quatro };
 
 Classes are a welcome addition in `ES6` however do not introduce a new OO model and rather are just `syntactical sugar` over JavaScript's
 existing prototype-based-inheritance model.
-* Roughly there are two methods to define a class: one way to to define a **class** is by using the `class` keyword and the other is
-simply a `class expression`
+* To declare a **class** simply use the `class` keyword
+ * There are two ways to define a class by using either `class declarations` or `class expressions`
+ * `class declarations` are not hoisted
+ * `class expressions` can be **named** or **unnamed**
 * The `constructor` creates and initializes an object created with a `class` and their `bodies` are executed in **strict mode**
 
 ``` javascript
@@ -462,6 +464,39 @@ console.log(particle.mass);
 console.log(particle.neutrons);
 console.log(particle.toString());
 ``` 
+> There can only be one special method with the name`constructor` however you can have many `prototype` methods in your class 
+
+``` javascript
+class Atom {
+  constructor( mass, neutrons) {
+    this.mass = mass;
+    this.neutrons = neutrons;
+  }
+  
+  // prototype method
+  get printMass() {
+    return this.calcMass();
+  }
+
+  calcMass() {
+     return `Atom's mass is ${this.mass}`;
+    
+  }
+  
+  // prototype method
+  get printSize() {
+    return this.calcSize();
+  }
+  
+  calcSize() {
+    return `Atom's size is ${this.mass * this.neutrons}`;
+  }
+}
+
+const square = new Atom(1000, 10);
+console.log(square.printMass);
+console.log(square.printSize);
+```
 
 ## Generators
 
