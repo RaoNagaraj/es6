@@ -425,13 +425,14 @@ export { quatro };
 
 ## Classes
 
-Classes are a welcome addition in `ES6` however do not introduce a new OO model and rather are just `syntactical sugar` over JavaScript's
-existing prototype-based-inheritance model.
+Classes are a welcome addition in `ES6` however do not introduce a new OO model and rather are just `syntactical sugar` over JavaScript's existing prototype-based-inheritance model.
 * To declare a **class** simply use the `class` keyword
  * There are two ways to define a class by using either `class declarations` or `class expressions`
  * `class declarations` are not hoisted
  * `class expressions` can be **named** or **unnamed**
 * The `constructor` creates and initializes an object created with a `class` and their `bodies` are executed in **strict mode**
+* The `extends` keyword is used to create a `class` that is a child of another class
+* The `static` keyword is used to define a **static** method of a `class`
 
 ``` javascript
 class Atom {
