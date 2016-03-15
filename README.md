@@ -643,6 +643,7 @@ map.size; // => 0
 ```
 
 > Another way to set a `map` via **iterable** `key-value "pairs":
+
 ``` javascript 
 let map = new Map([
         [ 1, 'one' ],
