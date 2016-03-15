@@ -499,6 +499,26 @@ console.log(square.printMass);
 console.log(square.printSize);
 ```
 
+## Symbols
+
+We now have a public interface to use symbols in `ES6`. A symbol is a unique and immutable `primitive data type`.
+* Their main purpose is to avoid name clashes between properties - you can use symbols as identifiers when adding props to an object
+* Don't use the `new` operator when creating a symbol, just invoke the function
+* Symbols are **unique**, you cannot alter them ( which is the whole point )
+* Interestingly symbols used as `keys` to an object will not appear as part of the object when using a `for in` loop
+
+> create a symbol
+
+``` javascript
+let sym = new Symbol(); // => throws an error
+
+let sym1 = Symbol( "symbol description" ); // => the right way
+let sym2 = Symbol( "symbol description" ); // => both `sym1` and `sym2` are unique
+ ```
+ 
+
+
+
 ## Generators
 
 ## Arrow Functions
