@@ -68,7 +68,7 @@ _The easiest way to get up and running in the `web browser`:_
 * Another web based tool is `Scratch JS` and comes in the form of a chrome extension. This interactive playground let's you transpile your code in the all familiar `dev tools` environment.
 
 _If you prefer the `command line`:_
-a
+
 * Use Node,js v4.x.x or `>`, they support is in-built for Babel
 * Run `npm install -g babel' and `babel node`
 
@@ -139,7 +139,7 @@ console.log( x ); // 7
  * prefer `const` for variables that never change.
  * don't blindly refactor legacy code when replacing `var` with `let` and `const`.
  
-> how `let` works: 
+How `let` works: 
  
  ``` javascript
  function myfunc() {
@@ -159,7 +159,7 @@ console.log( x ); // 7
    console.log( x ); // => 54321 
  }
 ``` 
-> using block scoped `let`:
+Using block scoped `let`:
 
 ``` javascript
 let outer = "outer";
@@ -175,7 +175,7 @@ let outer = "outer";
 // you cannot access `inner` and `nested` here 
 ```
 
-> more scoping rules for variables declared by `let`. you can clearly see that when refac:
+More scoping rules for variables declared by `let`. you can clearly see that when refactoring:
 
 ``` javascript
 function letBlocks {
@@ -188,7 +188,7 @@ function letBlocks {
 }  
 ```
 
-> How `const` works. Variables declared with `const` are immutable, but note that the values aren't just the declarations:
+How `const` works. Variables declared with `const` are immutable, but note that the values aren't just the declarations:
 
 ``` javascript
 const foo = '123';
@@ -215,7 +215,7 @@ Just like an object literal is a convenient way to construct an object, ES6 dest
 * `spread` and `rest` operators work with destructuring
 * You can destructure a `for-of` loop
 
-> Objects:
+Objects:
 
 ``` javascript
 const myObj = { firstname: 'Ahad', lastname: 'Bokhari' };
@@ -238,7 +238,7 @@ const {
 console.log(z, c);
 ```
 
-> Arrays:
+Arrays:
 
 ``` javascript
 const myArr = [ 'y', 'z'];
@@ -262,7 +262,7 @@ We all know that JavaScript `strings` are limited and lacking in capabality, esp
 * Placeholders using the `${ }` syntax are used from string substition and works fine with any kind of **expression**
  * expressions in between the placeholders (${expression}) and text b/w them get passed to a function
   
-> Familiarize yourself with the `syntax`:
+Familiarizing yourself with the `syntax`:
 
 ``` javascript
 const a = `this is a template literal`;
@@ -275,7 +275,7 @@ console.log( b ); // => yup, it works!
 const c = `Some string text ${expression}`;
 ```
 
-> Use the following syntax to `embed` expressions within template literals
+Use the following syntax to `embed` expressions within template literals
 
 ``` javascript
 const a = 100,
@@ -306,7 +306,7 @@ console.log(`You are now logged in, ${ user.name.toUpperCase() }. `);
 * Array: `from`, `of`
 * Array.prototype: `findIndex()`, `fill()`, `find()`, `copyWithin()`, `keys()`, `values()`, `entries()`
 
-> Using `Array.from` we create a new array instance from an `array-like` or `iterable object` 
+Using `Array.from` we create a new array instance from an `array-like` or `iterable object` 
 
 ```javascript
 var doc = document.querySelectorAll('*');
@@ -315,14 +315,14 @@ Array.from(doc).forEach(function(nodes) {
 });
 ```
 
-> Using `Array.of` we create an array of variable arguments passed to the function
+Using `Array.of` we create an array of variable arguments passed to the function
 
 ``` javascript
 var arr = Array.of(true, null, undefined, `some message`, 50);
 console.log( arr ); //[ true, null, undefined, "some message", 50]
 ```
 
-> Examples of additional `array` methods:
+Examples of additional `array` methods:
 
 ``` javascript
 // copyWithin()
@@ -373,7 +373,7 @@ they both have communities that rally around them, but are incompatible with eac
 * To import functions, objects and primitives that have been exported from an external module use the `import` statement
  * you may `import` an entire modules contents, a single member or multiple members in a module
 
-> A convenient way to specify `named` exports as below:
+A convenient way to specify `named` exports as below:
  
 ``` javascript
 // lib.js
@@ -410,7 +410,7 @@ import * as lib from 'lib'
 console.log( lib.quux ); // => 1.4142135623730951
 console.log( lib.refreshContact() ); // => alerts `Hello ES6 Modules`
 ```
-> Another technique in a module, we could use the following:
+Another technique in a module, we could use the following:
 
 ``` javascript
 const quatro = 10 * 10 * 10 * 10;
@@ -465,7 +465,7 @@ console.log(particle.mass);
 console.log(particle.neutrons);
 console.log(particle.toString());
 ``` 
-> There can only be one special method with the name`constructor` however you can have many `prototype` methods in your class 
+There can only be one special method with the name`constructor` however you can have many `prototype` methods in your class 
 
 ``` javascript
 class Atom {
@@ -507,7 +507,7 @@ We now have a public interface to use symbols in `ES6`. A symbol is a unique and
 * Symbols are **unique**, you cannot alter them ( which is the whole point )
 * Interestingly symbols used as `keys` to an object will not appear as part of the object when using a `for in` loop
 
-> Syntax for creating a symbol, `Symbol` or Symbol( description )`:
+Syntax for creating a symbol, `Symbol` or Symbol( description )`:
 
 ``` javascript
 let sym1 = new Symbol(); // => throws an error
@@ -534,7 +534,7 @@ for (const key in employee) {
 }
 ```
 
-> Symbols can be useful for hiding information in an object, and there is a new **object method** named `getOwnPropertySymbols` that will help you reflect into symbol props:
+Symbols can be useful for hiding information in an object, and there is a new **object method** named `getOwnPropertySymbols` that will help you reflect into symbol props:
 
 ``` javascript
 const phoneNo = Symbol();
@@ -571,7 +571,7 @@ Arrow functions are one of the more popular features of `ES6` saving developer t
 * Arrow functions allow developers to remove boilerplate, however you shouldn't remain ignorant of how 'lexical` scoping `this` works 
 * Be careful when using `arrow functions` as they aren't applicable everywhere, **use cases** will depend from situation to situation
 
-> For the sake of simplicity, we could do the following:
+For the sake of simplicity, we could do the following:
 
 ``` javascript
 const msg = () => alert("Hello Arrow Function");
@@ -589,7 +589,7 @@ let z = x.map(x => x);
 console.log(z); // [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 ```
 
-> Every new function defines it's own `this` value, yet `arrow` functions **close** over the `this` value
+Every new function defines it's own `this` value, yet `arrow` functions **close** over the `this` value
 
 ``` javascript
 // in ES5
@@ -627,7 +627,7 @@ With the addition of new data structures that are new to `ES6`, `Map` has been s
 * While similar, there are certain distinctions between **Objects** and **Maps** and therefore are certain use-cases
  * Most importantly `Map` instances are **only** useful for collections and `Objects` used as records with fields and methods
  
-> At a fundamental level when working with maps you could do the following:
+At a fundamental level when working with maps you could do the following:
 
 ``` javascript
 let map = new Map();    
@@ -642,7 +642,7 @@ map.clear()
 map.size; // => 0
 ```
 
-> Another way to set a `map` via **iterable** `key-value "pairs":
+Another way to set a `map` via **iterable** `key-value "pairs":
 
 ``` javascript 
 let map = new Map([
