@@ -627,7 +627,7 @@ With the addition of new data structures that are new to `ES6`, `Map` has been s
 * While similar, there are certain distinctions between **Objects** and **Maps** and therefore are certain use-cases
  * Most importantly `Map` instances are **only** useful for collections and `Objects` used as records with fields and methods
  
-> At a fundamental level when working with single entries you could do the following:
+> At a fundamental level when working with maps you could do the following:
 
 ``` javascript
 let map = new Map();    
@@ -641,6 +641,16 @@ console.log( map ); // => Map { "min" => -9007199254740991 }
 map.clear()
 map.size; // => 0
 ```
+
+> Another way to set a `map` via **iterable** `key-value "pairs":
+``` javascript 
+let map = new Map([
+        [ 1, 'one' ],
+        [ 2, 'two' ],
+        [ 3, 'three' ]
+    ]);
+```
+
 
 ## Set and WeakSet
 
