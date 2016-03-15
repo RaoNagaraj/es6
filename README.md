@@ -621,6 +621,27 @@ var t = new Tree();
 
 ## Map and WeakMap
 
+With the addition of new data structures that are new to `ES6`, `Map` has been sorely awaited by developers to map values to values - `Objects` have been used as `maps` historically
+* The `Map` object is a simple key/value map and is deemed an `iterable`
+* `for...of` loop returns an array of [key, value] for each **iteration**
+* While similar, there are certain distinctions between **Objects** and **Maps** and therefore are certain use-cases
+ * Most importantly `Map` instances are **only** useful for collections and `Objects` used as records with fields and methods
+ 
+> At a fundamental level when working with single entries you could do the following:
+
+``` javascript
+let map = new Map();    
+map.set( 'min', Number.MIN_SAFE_INTEGER );
+map.set( 'max', Number.MAX_SAFE_INTEGER );
+map.has('baz'); // => false
+map.size; 2
+console.log( map ); // => Map { "min" => -9007199254740991, "max" => 9007199254740991 }
+map.delete( 'max' );
+console.log( map ); // => Map { "min" => -9007199254740991 }
+map.clear()
+map.size; // => 0
+```
+
 ## Set and WeakSet
 
 ## Promises
