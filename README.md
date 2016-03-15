@@ -642,16 +642,27 @@ map.clear()
 map.size; // => 0
 ```
 
-Another way to set a `map` via **iterable** `key-value "pairs":
+Another way to set a `map` via **iterable** `key-value "pairs". Notice that you can any value as the key:
 
 ``` javascript 
-let map = new Map([
-        [ 1, 'one' ],
-        [ 2, 'two' ],
-        [ 3, 'three' ]
+let hash = new Map([
+        [ 'age', 1 ],
+        [ false, 'true' ],
+        [ function () {}, 'function' ],
+        [ {}, 'object' ], 
+        [ 5, 'five' ],
+        [ undefined, 'undefined'],
+        [ null, 'null'],
+  			[ Symbol(), 'Symbol']
     ]);
+
+for ( let key of hash.keys()) {
+  console.log( typeof key ); 
+} // => string, boolean, function, object, number, undefined, object, symbol
+
 ```
 
+> Note: The `for...of` statement creates a loop iterating only over `iterable objects' (Array, Map, Set, String, etc
 
 ## Set and WeakSet
 
