@@ -586,8 +586,9 @@ console.log( step.next() ); // => { value: "5: Normal functions 'run to completi
 console.log( step.next() ); // => { value: undefined, done: true }
 ```
 
-Furthering on our example and passing values into next('some value'); This might be a little confusing at first
+Furthering on our example and passing values into next('some value'); This might be a little confusing at first:
 
+``` javascript
 function *personFullName() {
     var fName = yield 'first name';
     var lName = yield 'second name';
@@ -601,6 +602,7 @@ myGenerator.next('Maya '); //{ value: 'second name', done: 'false' }
 myGenerator.next('Bethea') // { value:'undefined', done: 'true' }
 
 // => Maya Bethea
+```
 
 ## Arrow Functions
 
