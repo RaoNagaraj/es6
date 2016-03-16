@@ -1,5 +1,5 @@
 # ES6
-An introdcutory repo to ramp you up quickly with `ES6` features, tools and syntax - there's even a short section on `ES7`. Be sure to read the **contributions** section and check back from time to time for intermittent updates.
+An introdcutory repo to ramp you up quickly with `ES6` features, tools and syntax - there's even a short section on `ES7`. Read the **contributions** section and check back from time to time for intermittent updates.
 
 ## Table of Contents
 * [ECMA Brief History](#history)
@@ -423,6 +423,8 @@ export { quatro };
 
 ## Getters and Setters
 
+Getters and setters allow you to use standard property access notation for reads and writes. In `ES6` there is a much cleaner way than using `Object.defineProperty` to do this.  
+
 ## Classes
 
 Classes are a welcome addition in `ES6` however do not introduce a new OO model and rather are just `syntactical sugar` over JavaScript's existing prototype-based-inheritance model.
@@ -712,6 +714,8 @@ for ( let key of hash.keys()) {
 
 ## Promises
 
+## ES7 / ES2016 
+
 ## Contributions
 
-Contributions in the form of code samples and syntax are welcome - if you spot errors in example code or feel you have a better use case for a given feature issue a pull request.
+Contributions in the form of code samples and syntax are welcome - if you spot errors in example code or feel you have a better use case for a given feature issue a pull request. Typos and formatting requests will also be considered.
