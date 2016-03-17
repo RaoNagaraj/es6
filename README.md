@@ -29,7 +29,8 @@ An introdcutory repo to ramp you up quickly with `ES6` features, tools and synta
   * ECMAScript is the standard. `JavaScript`, `ActionScript` and `JScript` are implementations of it.
   * JavaScript has drastically changed from just `validation` and `on change` handlers to projects with a huge code base
   * The language was invented by Brendan Eich at Netscape in just under two weeks.
-  * It first appeared in Navigator 2.0 browser and has appeared in all subsequent browsers from Netscape and in all browsers from Microsoft starting with Internet Explorer 3.0. 
+  * `JavaScript` first appeared in Navigator 2.0 browser and has appeared in all subsequent browsers from Netscape and in all browsers from Microsoft starting with Internet Explorer 3.0.
+  * JavaScript was designed with C-like syntax with curly braces, the statement/expression dichotmory, dot notation etc. 
 
 _A brief snapshot of it's history:_
 
@@ -423,7 +424,32 @@ export { quatro };
 
 ## Getters and Setters
 
-Getters and setters allow you to use standard property access notation for reads and writes. In `ES6` there is a much cleaner way than using `Object.defineProperty` to do this.  
+Getters and setters allow you to use standard property access notation for reads and writes. In `ES6` there is a much cleaner way than using `Object.defineProperty` to do achieve this.
+* `Getting` and `Setting` helps you organize functionality associated with direct access
+  
+``` javascript
+class Employee {
+ 
+    constructor(name) {
+        this._name = name;
+    }
+ 
+    get name() {
+        return `Employees name is: ` + this._name.toUpperCase();
+    }
+ 
+    set name(newName){
+        if(newName){ 
+            this._name = newName;
+        }
+    }
+}
+ 
+let developer = new Employee("Sophia");
+console.log(developer.name); // => Sophia
+developer.name = "Dania";
+console.log(developer.name); // => Dania
+```
 
 ## Classes
 
