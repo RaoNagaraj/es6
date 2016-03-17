@@ -740,6 +740,56 @@ for ( let key of hash.keys()) {
 
 ## Promises
 
+Promise objects help us with asynchronous programming, espercially deferring async operations. Think of functions that return their results asychronously ( heard of callback hell? ).
+* ES6 has adopted `[PromiseA+](https://promisesaplus.com/)` spec, but there are other libraries out there as such as RSVP, Bluebird, Q
+* This allows you to create handlers to asynchronous actions's eventual success or failure in a synchronous way
+* So, promises have a sense of `state` which is either fullfilled, pending, or rejected
+
+An example of **callback hell**, also known as the **pyramid of doom**
+
+``` javascript
+asyncFn1(function(err, result) {  
+  asyncFn2(function(err, result) {
+    asyncFn3(function(err, result) {
+      asyncFn4(function(err, result) {
+       asyncFn5(function(err, result) {
+         // Do something
+       });
+      });
+    });
+  });
+});
+```
+
+`Promises` help flatten our structures, a most welcome **struct**:
+
+``` javascript
+asyncFn1(value1)
+.then(asyncFn2)
+.then(asyncFn3)
+.then(asyncFn4)
+.then(asycnFn5, value5 => {
+    // Do something with value5
+})
+.catch(function (error) {
+    // Handle any error from all above steps
+})
+.done();
+```
+
+An example of what a native `promise` looks like:
+
+``` javascript
+var p = new Promise(function(resolve, reject) {  
+   if (/* condition */) {
+      resolve(/* value */);  // fulfilled successfully
+   }
+   else {
+      reject(/* reason */);  // error, rejected
+   }
+});
+```
+
 ## ES7 / ES2016 
 
 ## Contributions
