@@ -11,7 +11,7 @@ An introdcutory repo to ramp you up quickly with `ES6` features, tools and synta
 * [String & Template Literals](#string-and-template-literals)
 * [Math & Number](#numbers-and-strings)
 * [Arrays](#arrays)
-* [Rest Parameter & Spread Operator](#spread-and-rest)
+* [Rest Parameter & Spread Operator](#rest-paramater-and-spread-operator)
 * [Modules](#modules)
 * [Getters & Setters](#getters-and-setters)
 * [Classes](#classes)
@@ -359,7 +359,40 @@ for( let entry of fruits.entries() ) {
 
 &#8593; [Back to TOC](#table-of-contents)
 
-## Rest Paramater and Spread Operator
+## Parameters
+
+In ES6 we have a standardized and more laconic way to handle parameters ( /i.e: defaults, parameters and arguments ) which reduces boilerplate code.
+
+In `ES5` you could do something like this to handle `default parameters`:
+
+``` javascript
+function multiply(x, y) {
+    y = y || 10; // Default to 1
+    return x * y;
+}
+```
+
+It's counterpart in 'ES6':
+
+``` javascript
+function multiply(x, y = 10) {
+  return x*y;
+}
+
+multiply(10); // => 100
+```
+
+The `rest` parameter has been added in, which also reduces the boilerplate code for handling arguments:
+
+``` javascript
+function f(...theArgs) {
+  console.log(theArgs.length);
+}
+
+f1();  // => 0
+f1(5); // => 1
+f1(5, 6, 7); // => 3
+```
 
 ## Modules
 
