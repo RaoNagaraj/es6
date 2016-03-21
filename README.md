@@ -11,7 +11,7 @@ An introdcutory repo to ramp you up quickly with `ES6` features, tools and synta
 * [String & Template Literals](#string-and-template-literals)
 * [Math & Number](#numbers-and-strings)
 * [Arrays](#arrays)
-* [Rest Parameter & Spread Operator](#rest-paramater-and-spread-operator)
+* [Parameters](#parameters)
 * [Modules](#modules)
 * [Getters & Setters](#getters-and-setters)
 * [Classes](#classes)
@@ -361,7 +361,7 @@ for( let entry of fruits.entries() ) {
 
 ## Parameters
 
-In ES6 we have a standardized and more laconic way to handle parameters ( /i.e: defaults, parameters and arguments ) which reduces boilerplate code.
+In ES6 we have a standardized and more laconic way to handle parameters ( /i.e: defaults, parameters and arguments ) which greatly reduces boilerplate code.
 
 In `ES5` you could do something like this to handle `default parameters`:
 
@@ -392,6 +392,18 @@ function f(...theArgs) {
 f1();  // => 0
 f1(5); // => 1
 f1(5, 6, 7); // => 3
+```
+> note: the arguments object is not a real array - rest params are instances of `Array` so you can call methods like **map**, **forEach** directly
+
+Another example of using `rest`, note how we collected arguments into a real array and not an arguments object:
+
+``` javascript
+function logEach(...stuff) {
+    stuff.forEach(function (stuff) {
+        console.log(stuff);
+    });
+}
+logEach("a", "b", "c");
 ```
 
 ## Modules
