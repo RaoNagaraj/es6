@@ -406,6 +406,24 @@ function logEach(...stuff) {
 logEach("a", "b", "c");
 ```
 
+The `...` construct in `ES6` is also used to provide “spread” for both function calls and array literals:
+
+``` javascript
+// => in `ES5' we'd do this
+function fnes5(a, b, c) {
+    console.log(a, b, c); // 1, 2, 3
+}
+var args = [1, 2, 3];
+fnes5.apply(null, args);
+
+// in `ES6` we avoid the use of `apply`
+function fnes6(a, b, c) {
+    console.log(a, b, c); // 1, 2, 3
+}
+var args = [1, 2, 3];
+fnes6(...args); // => 1, 2, 3
+```
+
 ## Modules
 
 At the core of modularity developers need a module system — a way to spread their work across numerous files and directories with access to each other. Without support for modules natively in ECMAScript there has been a community created effort to implement work-arounds — CommonJS and AMD being the most prevelant as
