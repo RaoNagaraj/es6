@@ -11,6 +11,7 @@ An introdcutory repo to ramp you up quickly with `ES6` features, tools and synta
 * [String & Template Literals](#string-and-template-literals)
 * [Math & Number](#numbers-and-strings)
 * [Arrays](#arrays)
+* [Rest & Spread Operators](#rest-and-spread-operators)
 * [Parameters](#parameters)
 * [Modules](#modules)
 * [Getters & Setters](#getters-and-setters)
@@ -356,6 +357,10 @@ for( let entry of fruits.entries() ) {
   // Snaey
 }
 ```
+
+&#8593; [Back to TOC](#table-of-contents)
+
+## Rest and Spread Operators
 
 &#8593; [Back to TOC](#table-of-contents)
 
