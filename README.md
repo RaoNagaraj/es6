@@ -858,7 +858,7 @@ var p = new Promise(function(resolve, reject) {
 });
 ```
 
-## ES7 / ES2016 
+## ES7
 
 ## Contributions
 
