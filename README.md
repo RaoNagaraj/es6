@@ -27,11 +27,11 @@ An introdcutory repo to ramp you up quickly with `ES6` features, tools and synta
 
 ## History
 * ECMAScript is now 17 years old with it's birth in 1997 
-  * ECMAScript is the standard. `JavaScript`, `ActionScript` and `JScript` are implementations of it.
-  * JavaScript has drastically changed from just `validation` and `on change` handlers to projects with a huge code base
+  * ECMAScript is the standard. `JavaScript`, `ActionScript` and `JScript` are implementations of it
   * JavaScript popularized two paradigms on the web, `functional programming` and `prototypal inheritance` (objects without classes)
-  * `JavaScript` first appeared in Navigator 2.0 browser and has appeared in all subsequent browsers from Netscape and in all browsers from Microsoft starting with Internet Explorer 3.0.
-  * JavaScript was designed with C-like syntax with curly braces, the statement/expression dichotmory, dot notation etc. 
+  * `JavaScript` first appeared in Navigator 2.0 browser and has appeared in all subsequent browsers from Netscape and in all browsers from Microsoft starting with Internet Explorer 3.0
+  * JavaScript was designed with C-like syntax with curly braces, the statement/expression dichotmory, dot notation etc
+  * ECMAScript is designed by [TC39](http://www.ecma-international.org/memento/TC39.htm) and operates on consensus
 
 _A brief snapshot of it's history:_
 
