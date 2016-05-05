@@ -855,6 +855,8 @@ var p = new Promise(function(resolve, reject) {
 
 ## ES7
 
+Work in progress...
+
 ## Contributions
 
 Contributions in the form of code samples and syntax are welcome - if you spot errors in example code or feel you have a better use case for a given feature issue a pull request. Typos and formatting requests will also be considered.
