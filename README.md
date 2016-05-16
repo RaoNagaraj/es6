@@ -855,7 +855,14 @@ var p = new Promise(function(resolve, reject) {
 
 ## ES7
 
-Work in progress...
+Proposals for the ES2017, ES7 specification can be found here:  [https://github.com/tc39/ecma262](https://github.com/tc39/ecma262) - definitely check the spec when in doubt.
+
+Some of the features might include:
+
+* `Array.prototype.includes`
+ * myArr.includes(value) // nice! 
+* `Async` and `Generator` functions
+* Exponential Operators
 
 ## Contributions
 
