@@ -382,7 +382,7 @@ function multiply(x, y = 10) {
 multiply(10); // => 100
 ```
 
-The `rest` parameter has been added in, which also reduces the boilerplate code for handling arguments:
+The `rest` parameter has been added into the spec, which also reduces the boilerplate code for handling arguments:
 
 ``` javascript
 function f(...theArgs) {
