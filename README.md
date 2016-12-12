@@ -6,7 +6,7 @@ An introdcutory repo to ramp you up quickly with `ES6` features, tools and synta
 * [Introduction](#es6-introduction)
 * [Tools](#tools)
 * [Block Scoping](#block-scoping)
-* [Let and Const](let-and-const)
+* [Let and Const](#let-and-const)
 * [Destructuring](#destructuring)
 * [String & Template Literals](#string-and-template-literals)
 * [Math & Number](#numbers-and-strings)
