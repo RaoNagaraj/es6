@@ -1,5 +1,6 @@
 # ES6
-An introdcutory repo to ramp you up quickly with `ES6` features, tools and syntax - there's even a short section on `ES7`. Read the **contributions** section and check back from time to time for intermittent updates.
+An introduction to help ramp you up quickly with `ES6` features, tools and syntax - there's even a short section on `ES7`. 
+Please read the **contributions** section and check back from time to time for intermittent updates.
 
 ## Table of Contents
 * [ECMA Brief History](#history)
@@ -44,7 +45,8 @@ _A brief snapshot of it's history:_
 | 5        | 2009          |      Added 'use strict' ( aligns with 3+ )                                               |
 | 5.1      | 2011          |      Maintenance revision (alings with 3+ )                                              |
 | 6        | 2015          |      Significant features added, that's why you're here                                  |
-| 6        | unreleased    |      Early stages of development                                                         |
+| 7        | 2016          |      Released, seventh edition of ECMAScript                                             |
+| 8        | 2017          |      Released, eighth edition of ECMAScript                                              |
 
 &#8593; [Back to TOC](#table-of-contents)
 
@@ -857,12 +859,14 @@ var p = new Promise(function(resolve, reject) {
 
 Proposals for the ES2017, ES7 specification can be found here:  [https://github.com/tc39/ecma262](https://github.com/tc39/ecma262) - definitely check the spec when in doubt.
 
-Some of the features might include:
+Some of the features will include:
 
 * `Array.prototype.includes`
  * myArr.includes(value) // nice! 
 * `Async` and `Generator` functions
 * Exponential Operators
+
+Please look at my es7 repository for more information on specific features
 
 ## Contributions
 
